@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Nav from '../../components/nav/nav'
+import Nav from '../../components/nav/Nav'
 
 
 function Main(){

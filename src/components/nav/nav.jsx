@@ -1,7 +1,11 @@
 import styled from 'styled-components'
+import User from './User'
 
-function Nav () {
-    return <Wrapper>네비게이션 바입니다</Wrapper>;
+function Nav () {    
+    return <Wrapper>
+        <User/>
+    <div>게시판 목록이 들어갈 곳입니다</div>
+    </Wrapper>;
 }
 
 const Wrapper = styled.div`
