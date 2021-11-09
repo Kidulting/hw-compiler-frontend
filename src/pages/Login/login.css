@@ -1,0 +1,30 @@
+.topbar {
+    display: flex;
+    position : relative;
+    flex-direction: row;
+    align-items: center;
+    padding-top : 0px;
+    width: 80%;
+    height: 30px;
+}
+
+.loginContainer {
+    display: flex;
+    position : relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    width: 100%;
+    height: 300px;
+}
+
+.loginHeader {
+    font-size: 50px;
+    margin-top: 12vh;
+    font-weight: 500;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #004EAE;
+    line-height: 1.1
+}
