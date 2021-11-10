@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './login.css';
 import QrImgDropDown from '../../components/QrImgDropDown/QrImgDropDown';
 import { qrParser } from '../../utils/qrParser';
