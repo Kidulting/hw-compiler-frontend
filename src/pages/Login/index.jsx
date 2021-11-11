@@ -16,7 +16,9 @@ function Login() {
       <nav className="topbar">HW-COMPILER 로그인 탑바 </nav>
       <section className="loginContainer">
         <div className="loginHeader">로그인</div>
-        <button type="button" onClick={onClickHandler}>라우팅 테스트용 로그인 버튼</button>
+        <button type="button" onClick={onClickHandler}>
+          라우팅 테스트용 로그인 버튼
+        </button>
         <QrImgDropDown qrParser={qrParser} dataFormat={hongikQrFormat} />
       </section>
     </>

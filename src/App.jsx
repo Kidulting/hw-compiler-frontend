@@ -12,18 +12,26 @@ function App() {
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
-  /** TODO 서버쪽 로그인 구현 이후 로직에 맞게 처리 하도록 수정 필요 */
+    /** TODO 서버쪽 로그인 구현 이후 로직에 맞게 처리 하도록 수정 필요 */
     setIsLogin(sessionStorage.getItem('login') === 'true');
   }, []);
 
   return (
     <Router>
       <Switch>
-        { !isLogin && <Route render={() => <LoginPage />} />}
+        {!isLogin && <Route render={() => <LoginPage />} />}
         <Route exact path="/" render={() => <MainPage />} />
-        <Route exact path="/assignment" render={() => <IssueAssignmentPage />} />
+        <Route
+          exact
+          path="/assignment"
+          render={() => <IssueAssignmentPage />}
+        />
         <Route exact path="/code/submit" render={() => <SubmitCodePage />} />
-        <Route exact path="/code/result" render={() => <ResultComparisonPage />} />
+        <Route
+          exact
+          path="/code/result"
+          render={() => <ResultComparisonPage />}
+        />
         <Route render={() => <ErrorPage />} />
       </Switch>
     </Router>
