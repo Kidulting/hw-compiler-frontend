@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import User from './User';
+import BoardList from '../board/BoardList';
 
 function Nav() {
   return (
     <Wrapper>
       <User />
-      <div>게시판 목록이 들어갈 곳입니다</div>
+      <BoardList />
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  width: 200px;
+  padding: 10px;
+  width: 300px;
   height: 100%;
   // 임시 테두리, 추후 삭제 필요
   border: red 1px solid;
