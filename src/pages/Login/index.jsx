@@ -1,4 +1,8 @@
 import React from 'react';
+import './login.css';
+import QrImgDropDown from '../../components/QrImgDropDown/QrImgDropDown';
+import { qrParser } from '../../utils/qrParser';
+import { hongikQrFormat } from '../../utils/qrParser/constants/hongik';
 
 function Login() {
   const onClickHandler = () => {
@@ -8,16 +12,16 @@ function Login() {
   };
 
   return (
-    <div>
-      로그인 페이지
-      <button
-      // TODO - lint 설정으로 type="button"을 명시해야하는데 추후 린트 설정 변경 필요
-        type="button"
-        onClick={onClickHandler}
-      >
-        로그인 버튼
-      </button>
-    </div>
+    <>
+      <nav className="topbar">HW-COMPILER 로그인 탑바 </nav>
+      <section className="loginContainer">
+        <div className="loginHeader">로그인</div>
+        <button type="button" onClick={onClickHandler}>
+          라우팅 테스트용 로그인 버튼
+        </button>
+        <QrImgDropDown qrParser={qrParser} dataFormat={hongikQrFormat} />
+      </section>
+    </>
   );
 }
 

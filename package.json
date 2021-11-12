@@ -24,8 +24,13 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.js": [
+    "*.{jsx}": [
       "eslint --fix",
       "git add ."
     ],
@@ -33,11 +38,6 @@
       "eslint --fix",
       "git add ."
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "eslintConfig": {
     "extends": [
@@ -60,11 +60,14 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^11.2.3"
+    "husky": "^4.3.8",
+    "lint-staged": "^11.1.4",
+    "prettier": "2.4.1"
   }
 }
