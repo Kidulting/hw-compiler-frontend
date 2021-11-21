@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import ErrorPage from './pages/Error';
-import IssueAssignmentPage from './pages/IssueAssignment';
+import RegisterHW from './pages/RegisterHW';
 import LoginPage from './pages/Login';
 import MainPage from './pages/Main';
 import ResultComparisonPage from './pages/ResultComparison';
@@ -21,11 +21,7 @@ function App() {
       <Switch>
         {!isLogin && <Route render={() => <LoginPage />} />}
         <Route exact path="/" render={() => <MainPage />} />
-        <Route
-          exact
-          path="/assignment"
-          render={() => <IssueAssignmentPage />}
-        />
+        <Route exact path="/registerhW" render={() => <RegisterHW />} />
         <Route exact path="/code/submit" render={() => <SubmitCodePage />} />
         <Route
           exact
