@@ -7,8 +7,8 @@ const HWTable = props => {
     <Wrapper>
       <HWListTitle>{title}</HWListTitle>
       <HWList>
-        {hwList.map(hw => (
-          <HWInfo>
+        {hwList.map((hw, index) => (
+          <HWInfo isOdd={index % 2 !== 0}>
             <Year>{hw.year}년</Year>
             <Professor>{hw.professor} 교수님</Professor>
             <HWId>{hw.id}번 과제</HWId>
@@ -23,34 +23,34 @@ const HWTable = props => {
 const Wrapper = styled.div``;
 
 const HWList = styled.div`
-  border: 1px solid purple;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
 const HWListTitle = styled.div``;
 
 const HWInfo = styled.div`
-  /* TODO : 테두리는 추후 삭제할 예정 */
-  border: 1px solid purple;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
   column-gap: 30px;
+  background-color: ${props => props.isOdd || 'rgba(0, 0, 0, 0.1)'};
 `;
 
 const Year = styled.div`
   width: 120px;
   text-align: right;
-  border-right: 2px solid purple;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px;
 `;
 const Professor = styled.div`
   width: 120px;
   text-align: right;
-  border-right: 2px solid purple;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px;
 `;
 const HWId = styled.div`
   width: 120px;
   text-align: right;
-  border-right: 2px solid purple;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px;
 `;
 const HWLink = styled.div`
