@@ -30,10 +30,12 @@ function MyPage() {
               간편 로그인하기
             </EasyLoginBtn>
           )}
-          {isEasyLogin && <div>간편 로그인 번호는 1234 입니다</div>}
+          {isEasyLogin && (
+            <EasyLoginNumber>간편 로그인 번호는 1234 입니다</EasyLoginNumber>
+          )}
         </EasyLoginWrapper>
-        <HWTable title="내가 제출한 과제 목록" hwList={hwList} />
         <HWTable title="내가 만든 과제 목록" hwList={hwList} />
+        <HWTable title="내가 제출한 과제 목록" hwList={hwList} />
       </Content>
     </div>
   );
@@ -51,7 +53,6 @@ const Title = styled.div`
 `;
 
 const EasyLoginWrapper = styled.div`
-  /* TODO : 테두리는 추후 삭제할 예정 */
   height: 50px;
   margin: 20px 0;
   display: flex;
@@ -60,6 +61,11 @@ const EasyLoginWrapper = styled.div`
 
 const EasyLoginTitle = styled.div`
   margin-right: 20px;
+  font-size: 20px;
+`;
+
+const EasyLoginNumber = styled.div`
+  background-color: pink;
 `;
 
 const EasyLoginBtn = styled.button`
