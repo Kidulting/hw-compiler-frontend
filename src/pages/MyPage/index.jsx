@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Nav from '../../components/nav/Nav';
 
@@ -12,12 +12,25 @@ const hwList = [
 ];
 
 function MyPage() {
+  const [isEasyLogin, setIsEasyLogin] = useState(false);
+  // TODO : 추후 handleEasyLoginButton 함수에 간편 로그인 API 요청 로직 추가 필요
+  const handleEasyLoginButton = () => {
+    setIsEasyLogin(true);
+  };
   return (
     <div>
       <Nav />
       <Content>
-        <div>my page</div>
-        <EasyLoginWrapper>간편 로그인</EasyLoginWrapper>
+        <Title>마이 페이지</Title>
+        <EasyLoginWrapper>
+          <EasyLoginTitle>간편 로그인</EasyLoginTitle>
+          {!isEasyLogin && (
+            <EasyLoginBtn type="button" onClick={handleEasyLoginButton}>
+              간편 로그인하기
+            </EasyLoginBtn>
+          )}
+          {isEasyLogin && <div>간편 로그인 번호는 1234 입니다</div>}
+        </EasyLoginWrapper>
         <div>
           {hwList.map(hw => (
             <HWInfo>
@@ -34,13 +47,32 @@ function MyPage() {
 const Content = styled.div`
   float: left;
   padding: 10px;
+  margin-left: 20px;
+`;
+
+const Title = styled.div`
+  margin: 20px;
+  font-size: 20px;
 `;
 
 const EasyLoginWrapper = styled.div`
   /* TODO : 테두리는 추후 삭제할 예정 */
-  border: 2px solid purple;
-  height: 120px;
-  width: 300px;
+  height: 50px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const EasyLoginTitle = styled.div`
+  margin-right: 20px;
+`;
+
+const EasyLoginBtn = styled.button`
+  padding: 10px;
+  background-color: pink;
+  border: none;
+  border-radius: 5px;
 `;
 
 const HWInfo = styled.div`
