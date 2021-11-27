@@ -33,6 +33,7 @@ function MyPage() {
           {isEasyLogin && <div>간편 로그인 번호는 1234 입니다</div>}
         </EasyLoginWrapper>
         <HWTable title="내가 제출한 과제 목록" hwList={hwList} />
+        <HWTable title="내가 만든 과제 목록" hwList={hwList} />
       </Content>
     </div>
   );

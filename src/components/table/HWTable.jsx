@@ -20,13 +20,18 @@ const HWTable = props => {
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  margin: 40px 0;
+`;
 
 const HWList = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
-const HWListTitle = styled.div``;
+const HWListTitle = styled.div`
+  font-size: 20px;
+  margin-bottom: 10px;
+`;
 
 const HWInfo = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.2);
