@@ -13,9 +13,11 @@ function Nav() {
 }
 
 const Wrapper = styled.div`
+  height: calc(100vh - 20px);
   padding: 10px;
   width: 300px;
-  height: 100%;
+  float: left;
+  overflow: scroll;
   // 임시 테두리, 추후 삭제 필요
   border: red 1px solid;
 `;

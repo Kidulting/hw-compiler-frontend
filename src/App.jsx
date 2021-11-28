@@ -7,6 +7,7 @@ import LoginPage from './pages/Login';
 import MainPage from './pages/Main';
 import ResultComparisonPage from './pages/ResultComparison';
 import SubmitCodePage from './pages/SubmitCode';
+import MyPage from './pages/MyPage';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           path="/code/result"
           render={() => <ResultComparisonPage />}
         />
+        <Route exact path="/mypage" render={() => <MyPage />} />
         <Route render={() => <ErrorPage />} />
       </Switch>
     </Router>
