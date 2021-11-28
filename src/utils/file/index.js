@@ -24,10 +24,11 @@ export const convertFileToImage = src =>
   });
 
 // [1] - canvas를 이용하여 img를 Uint8ClampedArray로 변경
-export const convertImageToUint8ClampedArray = ($canvas, img) => {
-  $canvas.current.width = img.width;
-  $canvas.current.height = img.height;
-  const ctx = $canvas.current.getContext('2d');
+export const convertImageToUint8ClampedArray = (canvas, img) => {
+  const imgInfo = canvas;
+  imgInfo.current.width = img.width;
+  imgInfo.current.height = img.height;
+  const ctx = imgInfo.current.getContext('2d');
   ctx.drawImage(img, 0, 0);
   return ctx.getImageData(0, 0, img.width, img.height);
 };
