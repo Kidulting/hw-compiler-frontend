@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Nav from '../../components/nav/Nav';
+import Nav from 'components/nav/Nav';
 
 function Main() {
   return (
