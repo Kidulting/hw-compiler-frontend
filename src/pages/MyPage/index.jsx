@@ -45,6 +45,7 @@ const Content = styled.div`
   float: left;
   padding: 10px;
   margin-left: 20px;
+  border: green 4px solid;
 `;
 
 const Title = styled.div`
